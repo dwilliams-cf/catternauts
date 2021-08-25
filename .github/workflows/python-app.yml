@@ -40,3 +40,8 @@ jobs:
       run: |
         #pytest
         coverage run --include app.py -m py.test
+
+    - name: Push coverage to Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
