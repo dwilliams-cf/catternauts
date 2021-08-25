@@ -21,7 +21,7 @@ install:
 script:
   - flake8 app.py
   - coverage run --include app.py -m py.test
-  - docker build -t dwilliams-kenzan/catternauts-api:latest .
+  - docker build -t dwilliams/catternauts-api:latest .
 
 after_success:
   - coveralls
